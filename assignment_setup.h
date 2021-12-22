@@ -87,7 +87,6 @@ inline void simulate(Eigen::VectorXd &q, Eigen::VectorXd &qdot, double dt, doubl
     for(unsigned int pickedi = 0; pickedi < spring_points.size(); pickedi++) {
         dV_spring_particle_particle_dq(dV_mouse, spring_points[pickedi].first, (q).segment<3>(spring_points[pickedi].second), 0.0, k_selected_now);
         f.segment<3>(3*Visualize::picked_vertices()[pickedi]) -= dV_mouse.segment<3>(3) * 0.0004;
-        std::cout <<dV_mouse.segment<3>(3).transpose() * 0.0004 << " " << 3*Visualize::picked_vertices()[pickedi] << "\n";
     }
     
     time_integration(q, qdot, M, f, df_dx, df_dv, fixed_point_indices, dt);// {    // KE = PE = 0.;
