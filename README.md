@@ -17,3 +17,10 @@ mode with cloth's corners being helded:
 ./final_project 1 
 ```
 
+Here are the keys to toggle between different settings of coefficients:
+```
+   D ... Toggle Damp coefficient 
+   B ... Toggle Bend coefficient 
+   S ... Toggle Stretch coefficient
+   R ... Toggle Shear coefficient
+```
